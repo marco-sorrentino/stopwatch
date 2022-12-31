@@ -1,0 +1,38 @@
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.card {
+  background-color: bisque;
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+}
+
+.timerDisplay {
+  background-color: aquamarine;
+  width: 80%;
+  text-align: center;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+}
+
+.botton {
+  border: 2px solid black;
+  padding: 0px 15px;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
