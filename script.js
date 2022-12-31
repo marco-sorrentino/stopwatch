@@ -6,4 +6,22 @@ window.onload = function () {
   let buttonStart = document.getElementById("start");
   let buttonStop = document.getElementById("stop");
   let buttonReset = document.getElementById("reset");
+  let interval;
+
+  buttonStart.addEventListener("click", () => {
+    clearInterval(interval);
+    interval = setInterval(startTimer, 10);
+  });
+
+  buttonStop.addEventListener("click", () => {
+    clearInterval(interval);
+  });
+
+  buttonReset.addEventListener("click", () => {
+    clearInterval(interval);
+    tens = 00;
+    seconds = 00;
+    appendTens.innerHTML = tens;
+    appendSeconds.innerHTML = seconds;
+  });
 };
