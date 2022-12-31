@@ -6,22 +6,43 @@ window.onload = function () {
   let buttonStart = document.getElementById("start");
   let buttonStop = document.getElementById("stop");
   let buttonReset = document.getElementById("reset");
-  let interval;
+  let Interval;
 
   buttonStart.addEventListener("click", () => {
-    clearInterval(interval);
-    interval = setInterval(startTimer, 10);
+    clearInterval(Interval);
+    Interval = setInterval(startTimer, 10);
   });
 
   buttonStop.addEventListener("click", () => {
-    clearInterval(interval);
+    clearInterval(Interval);
   });
 
   buttonReset.addEventListener("click", () => {
-    clearInterval(interval);
+    clearInterval(Interval);
     tens = 00;
     seconds = 00;
     appendTens.innerHTML = tens;
     appendSeconds.innerHTML = seconds;
   });
+
+  const startTimer = () => {
+    tens++;
+    if (tens <= 9) {
+      appendTens.innerHTML = "0" + tens;
+    }
+    if (tens > 9) {
+      appendTens.innerHTML = tens;
+    }
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+
+    if (seconds > 9) {
+      appendSeconds.innerHTML = seconds;
+    }
+  };
 };
